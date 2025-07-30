@@ -4727,3 +4727,158 @@ function Library:Window(p)
 end
 
 return Library
+
+--[[
+-- Load Library
+local Library = loadstring(game:HttpGet("https://p.ip.fi/GznB.txt"))()
+
+-- Create Main Window
+local Window = Library:Window({
+    Title = "Stellar UI - Showcase",
+    Desc = "Everything included",
+    Icon = 105059922903197,
+    Theme = "Amethyst",
+    Config = {
+        Keybind = Enum.KeyCode.RightShift,
+        Size = UDim2.new(0, 520, 0, 430)
+    },
+    CloseUIButton = {
+        Enabled = true,
+        Text = "Close"
+    }
+})
+
+-- Main Tab
+local Tab = Window:Tab({Title = "All Features", Icon = "star"}) do
+    Tab:Section({Title = "Basics"})
+
+    Tab:Toggle({
+        Title = "Enable Something",
+        Desc = "Toggles on or off",
+        Value = true,
+        Callback = function(v)
+            print("Toggle state:", v)
+        end
+    })
+
+    Tab:Button({
+        Title = "Run Action",
+        Desc = "Click to run",
+        Callback = function()
+            print("Action triggered!")
+            Window:Notify({
+                Title = "Success",
+                Desc = "The action has been executed.",
+                Time = 3
+            })
+        end
+    })
+
+    Tab:Textbox({
+        Title = "Input Text",
+        Desc = "Type something",
+        Placeholder = "Ex: Hello World",
+        Value = "",
+        ClearTextOnFocus = true,
+        Callback = function(text)
+            print("Text entered:", text)
+        end
+    })
+
+    Tab:Slider({
+        Title = "Speed",
+        Min = 0,
+        Max = 300,
+        Rounding = 1,
+        Value = 150,
+        Callback = function(val)
+            print("Slider value:", val)
+        end
+    })
+
+    Tab:Dropdown({
+        Title = "Simple Select",
+        List = {"Item 1", "Item 2", "Item 3"},
+        Value = "Item 2",
+        Callback = function(v)
+            print("Selected:", v)
+        end
+    })
+
+    Tab:MultiDropdown({
+        Title = "Multiple Choices",
+        List = {"Blue", "Green", "Yellow", "Purple"},
+        Value = {"Green"},
+        Callback = function(tbl)
+            print("Selected items:", table.concat(tbl, ", "))
+        end
+    })
+
+    local Code = Tab:Code({
+        Title = "Code Example",
+        Code = [[ Simple function
+function sayHello(name)
+    print("Hello, " .. name)
+end
+
+sayHello("x2zu") ]]
+        
+ --[[   })
+
+    task.delay(6, function()
+        Code:SetCode("-- Updated Code\nprint('New version')")
+    end)
+
+    Tab:Section({Title = "Advanced"})
+
+    Tab:Label({
+        Title = "Information",
+        Desc = "This is a visual-only label"
+    })
+
+    Tab:Colorpicker({
+        Title = "Background Color",
+        Desc = "Pick a color",
+        Value = Color3.fromRGB(91, 68, 209),
+        Callback = function(c)
+            print("Selected color:", c)
+        end
+    })
+
+    Tab:Keybind({
+        Title = "Quick Shortcut",
+        Desc = "Press a key",
+        Value = Enum.KeyCode.E,
+        Callback = function(key)
+            print("Keybind pressed:", key.Name)
+        end
+    })
+end
+
+Window:Line()
+
+-- Config Tab
+local Tab2 = Window:Tab({Title = "Settings", Icon = "gear"}) do
+    Tab2:Section({Title = "Misc"})
+
+    Tab2:Button({
+        Title = "Final Notice",
+        Desc = "Show a final message",
+        Callback = function()
+            Window:Notify({
+                Title = "End of Showcase",
+                Desc = "All components were successfully demonstrated.",
+                Time = 4
+            })
+        end
+    })
+end
+
+-- Initial Notification
+Window:Notify({
+    Title = "x2zu Stellar",
+    Desc = "All UI components loaded successfully.",
+    Time = 5
+})
+
+]]--
