@@ -3,6 +3,7 @@ SaveTheme = {}
 
 local themes = {
 	index = {'Dark', 'Amethyst', 'Cyber', 'Carbon', 'Oceanic'},
+	
 	Amethyst = {
 		['Shadow'] = Color3.fromRGB(24, 24, 31),
 		['Background'] = Color3.fromRGB(29, 28, 38),
@@ -392,6 +393,7 @@ local themes = {
 		}
 	}
 }
+
 }
 
 local ScreenGui = Instance.new("ScreenGui")
