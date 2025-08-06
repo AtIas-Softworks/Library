@@ -3,7 +3,6 @@ SaveTheme = {}
 
 local themes = {
 	index = {'Dark', 'Amethyst', 'Cyber', 'Carbon', 'Oceanic', 'Blossom'},
-	
 	Amethyst = {
 		['Shadow'] = Color3.fromRGB(24, 24, 31),
 		['Background'] = Color3.fromRGB(29, 28, 38),
@@ -397,14 +396,14 @@ local themes = {
 	['Shadow'] = Color3.fromRGB(25, 18, 30),
 	['Background'] = Color3.fromRGB(30, 22, 40),
 	['Page'] = Color3.fromRGB(27, 20, 37),
-	['Main'] = Color3.fromRGB(220, 100, 180), -- rosa vibrante
+	['Main'] = Color3.fromRGB(220, 100, 180), 
 	['Text & Icon'] = Color3.fromRGB(255, 240, 255),
 	['Function'] = {
 		['Toggle'] = {
 			['Background'] = Color3.fromRGB(35, 25, 45),
 			['True'] = {
 				['Toggle Background'] = Color3.fromRGB(180, 60, 150),
-				['Toggle Value'] = Color3.fromRGB(220, 100, 180),
+				['Toggle Value'] = Color3.fromRGB(255, 255, 255),
 			},
 			['False'] = {
 				['Toggle Background'] = Color3.fromRGB(40, 30, 50),
