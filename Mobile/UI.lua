@@ -2,7 +2,7 @@ Library = {}
 SaveTheme = {}
 
 local themes = {
-	index = {'Dark', 'Amethyst', 'Cyber', 'Carbon', 'Oceanic', 'Blosson'},
+	index = {'Dark', 'Amethyst', 'Cyber', 'Carbon', 'Oceanic', 'Blossom'},
 	
 	Amethyst = {
 		['Shadow'] = Color3.fromRGB(24, 24, 31),
